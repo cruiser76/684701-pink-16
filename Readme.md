@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Леонтьев](https://up.htmlacademy.ru/adaptive/16/user/684701).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Горбачев](https://up.htmlacademy.ru/adaptive/16/user/92028)
 
 ---
 
