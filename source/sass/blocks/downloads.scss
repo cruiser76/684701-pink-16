@@ -2,13 +2,14 @@
   display: flex;
   flex-direction: column;
   background-image:
-  url("../../img/iphone-hand-mobile@1x.png"),
-  url("../../img/bg-back-mobile@1x.jpg");
+    url("../../img/iphone-hand-mobile@1x.png"),
+    url("../../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: 0 175px, 0 0;
   padding-top: 395px;
   background-color: $color-darkmain;
 }
+
 .downloads__button {
   font-size: 18px;
   margin: 28px auto;
@@ -19,11 +20,12 @@
   width: 280px;
   text-align: center;
 }
+
 .downloads__description {
   background-image:
-  url("../../img/logo-apple.svg"),
-  url("../../img/logo-android.svg"),
-  url("../../img/logo-microsoft.svg");
+    url("../../img/logo-apple.svg"),
+    url("../../img/logo-android.svg"),
+    url("../../img/logo-microsoft.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 10% 20%, 50% 20%, 90% 20%;
   padding: 115px 20px 0;
