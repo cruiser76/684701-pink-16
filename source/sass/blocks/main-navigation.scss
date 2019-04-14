@@ -1,12 +1,15 @@
 .main-navigation {
   background-color: $color-main;
 }
+
 .main-navigation__list {
   @include list-reset();
 }
+
 .main-navigation__item {
   text-align: center;
 }
+
 .main-navigation a {
   display: block;
   width: 100%;
