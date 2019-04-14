@@ -1,0 +1,10 @@
+@mixin wrapper() {
+  margin: 0 auto;
+  width: 320px;
+
+}
+@mixin list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

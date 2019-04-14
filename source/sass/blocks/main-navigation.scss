@@ -1,0 +1,19 @@
+.main-navigation {
+  background-color: $color-main;
+}
+.main-navigation__list {
+  @include list-reset();
+}
+.main-navigation__item {
+  text-align: center;
+}
+.main-navigation a {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $white;
+  padding: 25px 0;
+}
