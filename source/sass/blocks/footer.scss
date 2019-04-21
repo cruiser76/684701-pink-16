@@ -1,3 +1,42 @@
 .footer {
-  @include wrapper();
+  @include wrapper(320px);
+  /*Временно*/
+  min-height: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer__logo {
+  @include wrapper(200px);
+}
+
+
+@media (min-width: $tablet) {
+  .footer {
+    @include wrapper($tablet);
+    min-height: 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__logo {
+    width: 25%;
+  }
+
+  .footer__social {
+    width: 50%;
+  }
+
+  .footer__design {
+    width: 25%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .footer {
+    @include wrapper($desktop);
+    min-height: 225px;
+  }
 }

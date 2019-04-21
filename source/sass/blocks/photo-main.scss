@@ -1,5 +1,5 @@
 .photo-main {
-  @include wrapper();
+  @include wrapper(320px);
 }
 
 .photo-main__title {
@@ -11,7 +11,10 @@
   font-weight: lighter;
   text-align: center;
   background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-clip: padding-box;
   background-repeat: no-repeat;
+  /*Временно*/
+  min-height: 170px;
 }
 
 .photo-main__text {
@@ -19,4 +22,30 @@
   padding: 0 20px;
   line-height: 30px;
   text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .photo-main {
+    @include wrapper($tablet);
+    min-height: 365px;
+  }
+
+  .photo-main__title {
+    /*Временно*/
+    min-height: 330px;
+    background-color: $color-main;
+  }
+}
+
+@media (min-width: $desktop) {
+  .photo-main {
+    @include wrapper($desktop);
+    min-height: 110px;
+  }
+
+  .photo-main__title {
+    /*Временно*/
+    min-height: 285px;
+    background-color: $color-main;
+  }
 }

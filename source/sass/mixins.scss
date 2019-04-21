@@ -1,6 +1,6 @@
-@mixin wrapper() {
+@mixin wrapper($width) {
   margin: 0 auto;
-  width: 320px;
+  width: $width;
 }
 
 @mixin list-reset() {

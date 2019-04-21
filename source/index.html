@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фотоприложение Пинк</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,6 +14,14 @@
   <header class="header">
 
     <nav class="main-navigation">
+
+      <a class="logo" href="">
+          <img class="logo__img" src="https://via.placeholder.com/75x22" alt="Логотип фотоприложения Пинк" width="75"
+            height="22">
+      </a>
+
+      <button class="main-navigation__toggle">Открыть меню</button>
+
       <ul class="main-navigation__list">
         <li class="main-navigation__item main-navigation__item--active"><a href="">Главная</a></li>
         <li class="main-navigation__item"><a href="photo.html">Фотографии</a></li>
@@ -20,12 +29,6 @@
         <li class="main-navigation__item"><a href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
       </ul>
 
-      <button class="main-navigation__toggle">Открыть меню</button>
-
-      <a class="logo" href="">
-        <img class="logo__logo-img" src="https://via.placeholder.com/75x22" alt="Логотип фотоприложения Пинк" width="75"
-          height="22">
-      </a>
     </nav>
 
   </header>
@@ -35,9 +38,11 @@
     <h1 class="visually-hidden">Фотоприложение Пинк</h1>
 
     <section class="downloads">
-      <h2 class="visually-hidden">Загрузка приложения</h2>
-      <a class="downloads__button" href="#">Скачать приложение</a>
-      <p class="downloads__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      <div class="downloads__container">
+        <h2 class="visually-hidden">Загрузка приложения</h2>
+        <a class="downloads__button" href="#">Скачать приложение</a>
+        <p class="downloads__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+      </div>
     </section>
 
     <section class="about-app">
@@ -54,11 +59,11 @@
           <h3 class="facts-list__title">Поднимает настроение</h3>
           <p class="facts-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
         </li>
-        <li>
+        <li class="facts-list__item">
           <h3 class="facts-list__title">Меняет мир вокруг</h3>
           <p class="facts-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
         </li>
-        <li>
+        <li class="facts-list__item">
           <h3 class="facts-list__title">Заводит новых друзей</h3>
           <p class="facts-list__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
         </li>

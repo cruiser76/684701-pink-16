@@ -33,3 +33,26 @@
   font-weight: lighter;
   color: $white;
 }
+
+@media (min-width: $tablet) {
+  .downloads {
+    padding-top: 0;
+    /*Временно*/
+    min-height: 620px;
+  }
+
+  .downloads__container {
+    width: 340px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .downloads {
+    padding-top: 100px;
+  }
+
+  .downloads__container {
+    width: 500px;
+  }
+}
+

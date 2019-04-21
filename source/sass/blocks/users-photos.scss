@@ -1,0 +1,19 @@
+
+.users-photos__inner {
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet) {
+  .users-photos__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .users-photos__inner {
+    padding: 0 130px;
+  }
+}
