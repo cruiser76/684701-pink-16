@@ -1,3 +1,7 @@
+.photo-item {
+  margin-bottom: 20px;
+}
+
 .photo-item__img {
   display: block;
   margin: 0 auto;
@@ -5,7 +9,6 @@
 
 .photo-item__description {
   background-color: $lightgray;
-  margin: 0 20px;
 }
 
 .photo-item__author {
@@ -26,4 +29,24 @@
   font-size: 12px;
   color: $pink;
   padding: 0 40px;
+}
+
+@media (min-width: $tablet) {
+  .photo-item {
+    width: 300px;
+  }
+
+  .photo-item--pan {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .photo-item {
+    margin-bottom: 55px;
+  }
+
+  .photo-item--pan {
+    margin-bottom: 50px;
+  }
 }

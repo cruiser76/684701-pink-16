@@ -1,5 +1,5 @@
 .form-main {
-  @include wrapper();
+  @include wrapper(320px);
 }
 
 .form-main__title {
@@ -10,6 +10,35 @@
   color: $white;
   font-weight: lighter;
   text-align: center;
-  background-image: url("../../img/bg-back-mobile@1x.jpg");
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-clip: padding-box;
   background-repeat: no-repeat;
+  /*Временно*/
+  min-height: 170px;
+}
+
+@media (min-width: $tablet) {
+  .form-main {
+    @include wrapper($tablet);
+
+    min-height: 365px;
+  }
+
+  .form-main__title {
+    /*Временно*/
+    min-height: 335px;
+    background-color: $color-main;
+  }
+}
+
+@media (min-width: $desktop) {
+  .form-main {
+    @include wrapper($desktop);
+    min-height: 110px;
+  }
+
+  .form-main__title {
+    /*Временно*/
+    min-height: 290px;
+  }
 }

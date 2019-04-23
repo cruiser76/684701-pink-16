@@ -1,3 +1,6 @@
+/*Временно*/
+// @import "outlines.scss";
+@import "normalize.scss";
 @import "variables.scss";
 @import "scaffolding.scss";
 @import "mixins.scss";
@@ -12,3 +15,6 @@
 @import "blocks/design.scss";
 @import "blocks/photo-main.scss";
 @import "blocks/photo-item.scss";
+@import "blocks/users-photos.scss";
+@import "blocks/social.scss";
+@import "blocks/logo.scss";

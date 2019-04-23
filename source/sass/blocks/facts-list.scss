@@ -1,7 +1,7 @@
 .facts-list {
   @include list-reset();
   background-color: $lightgray;
-  background-image: url("../../img/iphone-screen-mobile@1x.png");
+  background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 50% 110%;
   padding-bottom: 330px;
@@ -15,4 +15,33 @@
 
 .facts-list__text {
   text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .facts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 0;
+    /*Временно*/
+    min-height: 483px;
+  }
+
+  .facts-list__item {
+    width: 340px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .facts-list {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    /*Временно*/
+    min-height: 483px;
+  }
+
+  .facts-list__item {
+    width: 300px;
+  }
 }

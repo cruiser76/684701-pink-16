@@ -13,6 +13,14 @@
   <header class="header">
 
     <nav class="main-navigation">
+
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="https://via.placeholder.com/75x22" alt="Логотип фотоприложения Пинк" width="75"
+          height="22">
+      </a>
+
+      <button class="main-navigation__toggle">Открыть меню</button>
+
       <ul class="main-navigation__list">
         <li class="main-navigation__item main-navigation__item--active"><a href="index.html">Главная</a></li>
         <li class="main-navigation__item"><a href="">Фотографии</a></li>
@@ -20,12 +28,6 @@
         <li class="main-navigation__item"><a href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
       </ul>
 
-      <button class="main-navigation__toggle">Открыть меню</button>
-
-      <a class="logo" href="index.html">
-        <img class="logo__logo-img" src="https://via.placeholder.com/75x22" alt="Логотип фотоприложения Пинк" width="75"
-          height="22">
-      </a>
     </nav>
 
   </header>
@@ -40,10 +42,11 @@
 
     <section class="users-photos">
 
-      <article class="photo-item">
-        <img class="photo-item__img photo-item__img--pan" src="https://via.placeholder.com/320x140" alt="Фотография">
+      <article class="photo-item photo-item--pan">
+        <img class="photo-item__img photo-item__img--pan" src="https://via.placeholder.com/1200x140" alt="Фотография">
         <div class="photo-item__description">
-          <span class="photo-item__author">Анна<time class="photo-item__time" datetime="2019-04-04T23:59:59">(5 минут назад)</time>
+          <span class="photo-item__author">Анна<time class="photo-item__time" datetime="2019-04-04T23:59:59">(5 минут
+              назад)</time>
           </span>
           <p class="photo-item__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
             перископе, задавайте свои вопросы!</p>
@@ -51,75 +54,78 @@
         </div>
       </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Левон<time class="photo-item__time" datetime="2019-04-04T23:59:59">(5 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-          <span class="photo-item__likes">Нравится: 356</span>
-        </div>
-      </article>
+      <div class="users-photos__inner">
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Левон<time class="photo-item__time" datetime="2019-04-04T23:59:59">(5 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <span class="photo-item__likes">Нравится: 356</span>
+          </div>
+        </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Антон<time class="photo-item__time" datetime="2019-04-04T23:59:59">(12 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Соседи будут рады!</p>
-          <span class="photo-item__likes">Нравится: 666</span>
-        </div>
-      </article>
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Антон<time class="photo-item__time" datetime="2019-04-04T23:59:59">(12 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Соседи будут рады!</p>
+            <span class="photo-item__likes">Нравится: 666</span>
+          </div>
+        </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Борис<time class="photo-item__time" datetime="2019-04-04T23:59:59">(20 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Здесь могла бы быть ваша цитата о высоком и вечном</p>
-          <span class="photo-item__likes">Нравится: 215</span>
-        </div>
-      </article>
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Борис<time class="photo-item__time" datetime="2019-04-04T23:59:59">(20 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Здесь могла бы быть ваша цитата о высоком и вечном</p>
+            <span class="photo-item__likes">Нравится: 215</span>
+          </div>
+        </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Сергей<time class="photo-item__time" datetime="2019-04-04T23:59:59">(25 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Самая кубанская в мире!</p>
-          <span class="photo-item__likes">Нравится: 4</span>
-        </div>
-      </article>
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Сергей<time class="photo-item__time" datetime="2019-04-04T23:59:59">(25 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Самая кубанская в мире!</p>
+            <span class="photo-item__likes">Нравится: 4</span>
+          </div>
+        </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Максим<time class="photo-item__time" datetime="2019-04-04T23:59:59">(40 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Где снег-то?</p>
-          <span class="photo-item__likes">Нравится: 150</span>
-        </div>
-      </article>
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Максим<time class="photo-item__time" datetime="2019-04-04T23:59:59">(40 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Где снег-то?</p>
+            <span class="photo-item__likes">Нравится: 150</span>
+          </div>
+        </article>
 
-      <article class="photo-item">
-        <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
-        <div class="photo-item__description">
-          <span class="photo-item__author">Надежда<time class="photo-item__time" datetime="2019-04-04T23:59:59">(45 часов
-            назад)</time></span>
-          <p class="photo-item__comment">Всем GM и взаимные лайки!</p>
-          <span class="photo-item__likes">Нравится: 2560</span>
-        </div>
-      </article>
+        <article class="photo-item">
+          <img class="photo-item__img" src="https://via.placeholder.com/280x180" alt="Фотография">
+          <div class="photo-item__description">
+            <span class="photo-item__author">Надежда<time class="photo-item__time" datetime="2019-04-04T23:59:59">(45 часов
+                назад)</time></span>
+            <p class="photo-item__comment">Всем GM и взаимные лайки!</p>
+            <span class="photo-item__likes">Нравится: 2560</span>
+          </div>
+        </article>
+      </div>
+
 
     </section>
 
     <footer class="footer">
 
-      <a class="logo logo__footer" href="index.html">
+      <a class="logo footer__logo" href="index.html">
         <img class="logo__img" src="https://via.placeholder.com/200x80" alt="Логотип Пинк">
       </a>
 
-      <ul class="social">
+      <ul class="social footer__social">
 
         <li class="social__item social__item--tw"><a href="#"><span class="visually-hidden">twitter</span></a></li>
         <li class="social__item social__item--fb"><a href=""><span class="visually-hidden">facebook</span></a></li>
@@ -127,7 +133,7 @@
 
       </ul>
 
-      <section class="design">
+      <section class="design footer__design">
 
         <h2 class="visually-hidden">Копирайт</h2>
         <p class="design__text">Разработано</p>
