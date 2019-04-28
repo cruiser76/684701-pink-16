@@ -1,20 +1,29 @@
 .facts-list {
   @include list-reset();
   background-color: $lightgray;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-image:
+    url("../img/iphone-screen-mobile@1x.png"),
+    linear-gradient(174deg, #ffffff 34px, #f2f2f2 0);
   background-repeat: no-repeat;
-  background-position: 50% 110%;
-  padding-bottom: 330px;
+  background-position: 50% 109%;
+  padding-bottom: 288px;
+  padding-top: 66px;
+}
+
+.facts-list__item {
+  margin-bottom: 30px;
 }
 
 .facts-list__title {
   font-size: 18px;
   color: $black;
   text-align: center;
+  margin-bottom: -1px;
 }
 
 .facts-list__text {
   text-align: center;
+  padding: 0 20px;
 }
 
 @media (min-width: $tablet) {
@@ -22,13 +31,31 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-bottom: 0;
-    /*Временно*/
-    min-height: 483px;
+    padding-bottom: 20px;
+    background-image:
+      url("../img/iphone-screen-3-tablet@1x.png"),
+      linear-gradient(176deg, #ffffff 50px, #f2f2f2 0);
+    background-position: 5% 66%;
   }
 
   .facts-list__item {
     width: 340px;
+    padding: 9px;
+    margin-bottom: 16px;
+  }
+
+  .facts-list__title {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 12px;
+    padding: 0;
+  }
+
+  .facts-list__text {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-right: 10px;
   }
 }
 
@@ -37,6 +64,9 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-around;
+    background-image:
+      url("../img/iphone-screen-1-tablet@1x.png"),
+      linear-gradient(174deg, #ffffff 34px, #f2f2f2 0);
     /*Временно*/
     min-height: 483px;
   }

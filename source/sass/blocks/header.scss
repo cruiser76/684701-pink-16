@@ -1,14 +1,11 @@
 .header {
   background-color: $color-main;
-  min-height: 325px;
 
   @include wrapper(320px);
 }
 
 @media (min-width: $tablet) {
   .header {
-    min-height: 365px;
-
     @include wrapper($tablet);
   }
 }
@@ -16,6 +13,6 @@
 @media (min-width: $desktop) {
   .header {
     @include wrapper($desktop);
-    min-height: 110px;
+    height: auto;
   }
 }
