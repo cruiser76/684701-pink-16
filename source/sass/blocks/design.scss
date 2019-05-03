@@ -1,4 +1,31 @@
+.design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.design__link {
+  padding-top: 5px;
+
+  & path {
+    fill: $pink;
+  }
+}
+
 .design__text {
+  margin-right: 15px;
   line-height: 18px;
   text-align: center;
+}
+
+@media (min-width: $desktop) {
+  .design {
+    justify-content: flex-end;
+  }
+
+  .design__text {
+    font-size: 18px;
+    line-height: 18px;
+    text-align: right;
+  }
 }

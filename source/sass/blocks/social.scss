@@ -1,5 +1,44 @@
 .social {
   display: flex;
   justify-content: space-between;
-  margin: 0 70px;
+  padding: 0 70px;
+}
+
+.social__item {
+  width: 51px;
+  height: 51px;
+  border: 3px solid $lightgray;
+  border-radius: 50%;
+  display: flex;
+
+  & a {
+    margin: auto;
+  }
+
+  & path {
+    fill: $pink;
+  }
+}
+
+.social__item--tw {
+  padding-top: 3px;
+}
+
+.social__item--fb {
+  padding-top: 5px;
+}
+
+.social__item--youtube {
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+@media (min-width: $desktop) {
+  .social {
+    justify-content: center;
+  }
+
+  .social__item {
+    margin-left: 15px;
+  }
 }

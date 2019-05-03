@@ -1,51 +1,41 @@
-.photo-main {
-  @include wrapper(320px);
+.temporary {
+  min-height: 952px;
 }
 
-.photo-main__title {
-  margin: 0;
-  padding: 0 20px;
-  font-size: 24px;
-  line-height: 24px;
-  color: $white;
-  font-weight: lighter;
-  text-align: center;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-clip: padding-box;
-  background-repeat: no-repeat;
+.photo-main__title-container {
   /*Временно*/
   min-height: 170px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 23%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .photo-main__text {
-  margin: 0;
-  padding: 0 20px;
+  @include wrapper(320px);
+  margin-bottom: 49px;
+  padding: 0 35px;
+  padding-top: 45px;
   line-height: 30px;
   text-align: center;
 }
 
 @media (min-width: $tablet) {
-  .photo-main {
+  .photo-main__text {
     @include wrapper($tablet);
-    min-height: 365px;
-  }
-
-  .photo-main__title {
-    /*Временно*/
-    min-height: 330px;
-    background-color: $color-main;
+    margin-bottom: 76px;
+    padding: 0 62px;
+    padding-top: 92px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: $desktop) {
-  .photo-main {
+  .photo-main__text {
     @include wrapper($desktop);
-    min-height: 110px;
-  }
-
-  .photo-main__title {
-    /*Временно*/
-    min-height: 285px;
-    background-color: $color-main;
+    margin-bottom: 88px;
+    padding: 0 300px;
+    padding-top: 92px;
+    font-size: 18px;
   }
 }

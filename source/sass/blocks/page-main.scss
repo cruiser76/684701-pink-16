@@ -1,18 +1,3 @@
 .page-main {
-  @include wrapper(320px);
-}
-
-@media (min-width: $tablet) {
-  .page-main {
-    min-height: 365px;
-
-    @include wrapper($tablet);
-  }
-}
-
-@media (min-width: $desktop) {
-  .page-main {
-    @include wrapper($desktop);
-    min-height: 110px;
-  }
+  display: block;
 }
