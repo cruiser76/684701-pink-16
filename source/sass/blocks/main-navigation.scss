@@ -1,6 +1,7 @@
 .main-navigation {
   position: relative;
   background-color: $color-main;
+  // background-color: transparent;
 }
 
 .main-navigation__logo {
@@ -21,7 +22,7 @@
 
 .main-navigation__list {
   @include list-reset();
-  //ddisplay: none;
+  // display: none;
 }
 
 .main-navigation__item {
@@ -55,19 +56,25 @@
 
 @media (min-width: $desktop) {
   .main-navigation {
+    @include wrapper($desktop);
     display: flex;
+    min-height: 110px;
     justify-content: space-between;
-    align-items: flex-start;
-    background-color: transparent;
-    position: absolute;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   .main-navigation__list {
     width: 620px;
     display: flex;
     justify-content: space-between;
-    margin-top: 21px;
     margin-right: 130px;
+  }
+
+  .main-navigation__logo {
+    margin-left: 162px;
+    padding: 0;
+    box-shadow: none;
   }
 
   .main-navigation__item {

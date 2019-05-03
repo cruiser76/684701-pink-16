@@ -1,0 +1,203 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.promo--small {
+  padding-top: 0;
+  padding-bottom: 52px;
+}
+
+.promo--form {
+  padding-top: 0;
+  padding-bottom: 23px;
+}
+
+.promo__container {
+  background-color: $color-darkmain;
+  padding-top: 28px;
+  padding-bottom: 14px;
+}
+
+.promo__title {
+  @include wrapper(320px);
+  padding: 30px 20px;
+  padding-top: 336px;
+  font-size: 24px;
+  line-height: 29px;
+  color: $white;
+  font-weight: lighter;
+  text-align: center;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+}
+
+.promo__title--hidden {
+  font-size: 0;
+}
+
+.promo__title--small {
+  background: none;
+  padding-top: 30px;
+}
+
+.promo__button {
+  font-size: 18px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  padding: 15px;
+  line-height: 18px;
+  font-weight: bold;
+  color: $white;
+  display: block;
+  width: 280px;
+  text-align: center;
+  border: 3px solid $white;
+  border-radius: 28px;
+}
+
+.promo__description {
+  @include wrapper(320px);
+  background-image:
+    url("../img/logo-apple.svg"),
+    url("../img/logo-android.svg"),
+    url("../img/logo-microsoft.svg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 21% 5%, 50% 13%, 79% 15%;
+  padding: 83px 20px 16px;
+  text-align: center;
+  font-weight: lighter;
+  color: $white;
+}
+
+@media (min-width: $tablet) {
+  .promo--small {
+    padding-bottom: 83px;
+  }
+
+  .promo--form {
+    padding-bottom: 23px;
+  }
+
+  .promo__inner {
+    @include wrapper ($tablet);
+    padding-bottom: 96px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 48% 100%;
+  }
+
+  .promo__inner--small {
+    background: none;
+    padding-bottom: 56px;
+  }
+
+  .promo__container {
+    width: 340px;
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .promo__title {
+    display: block;
+    margin: 0;
+    margin-bottom: 2px;
+    padding: 93px 30px 0 49px;
+    color: $white;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: lighter;
+    text-align: center;
+    background: none;
+  }
+
+  .promo__title--small {
+    @include wrapper($tablet);
+    padding-top: 70px;
+    padding-left: 30px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+
+  .promo__button {
+    width: 300px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo__description {
+    width: 340px;
+    font-size: 18px;
+    line-height: 24px;
+    background-position: 22% 17%, 50% 21%, 77% 25%;
+    padding: 109px 20px 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo__inner {
+    @include wrapper ($desktop);
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 97% 100%;
+    padding-left: 30px;
+    padding-bottom: 107px;
+  }
+
+  .promo__container {
+    width: 500px;
+  }
+
+  .promo__title {
+    width: 500px;
+    font-size: 50px;
+    line-height: 60px;
+    padding: 108px 119px 0 121px;
+    margin-bottom: 25px;
+  }
+
+  .promo__button {
+    font-size: 21px;
+    line-height: 18px;
+    margin-bottom: 50px;
+  }
+
+  .promo__description {
+    padding-top: 129px;
+    background-position: 23% 15%, 50% 20%, 77% 21%;
+  }
+
+  .promo__inner--small {
+    background: none;
+    padding-bottom: 100px;
+  }
+
+  .promo__title--small {
+    @include wrapper($desktop);
+    padding: 64px 420px 0;
+    padding-left: 360px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .promo__title--form {
+    padding: 62px 170px 0;
+    padding-left: 110px;
+  }
+
+  .promo--small {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .promo--form {
+    padding-bottom: 0;
+  }
+}
+

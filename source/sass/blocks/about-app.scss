@@ -1,4 +1,5 @@
 .about-app__lead {
+  @include wrapper(320px);
   padding-top: 40px;
   font-size: 24px;
   line-height: 29px;
@@ -8,8 +9,18 @@
 
 .about-app__text {
   margin: 0;
-  margin-bottom: 29px;
   padding: 0;
+
+  &:first-of-type {
+    margin-bottom: 29px;
+  }
+}
+
+.about-app__facts {
+  background-color: $lightgray;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: 0% -5%;
 }
 
 .about-app__features {
@@ -18,28 +29,41 @@
 
 @media (min-width: $tablet) {
   .about-app__lead {
-    padding-top: 50px;
+    @include wrapper($tablet);
+    padding-top: 48px;
     font-size: 40px;
     line-height: 48px;
   }
 
   .about-app__text {
-    margin-bottom: 0;
+    &:nth-of-type(1) {
+      margin-bottom: 0;
+    }
+
+    &:nth-of-type(2) {
+      padding: 0 50px;
+      margin-bottom: 0;
+    }
   }
 
-  .about-app__text:nth-of-type(2) {
-    padding: 0 50px;
-    margin-bottom: 45px;
+  .about-app__facts {
+    background-position: 0% 0%;
   }
 
-  .about-app__features {
+  .about-app__features-inner {
+    @include wrapper($tablet);
     display: flex;
     justify-content: flex-end;
   }
 
   .about-app__inner {
+
     width: 340px;
-    padding-top: 95px;
+    padding-top: 96px;
+  }
+
+  .about-app__features {
+    display: block;
   }
 
   .about-app__features-value {
@@ -85,5 +109,81 @@
     padding-right: 22px;
     font-size: 14px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .about-app__lead {
+    @include wrapper ($desktop);
+    padding-top: 67px;
+    margin-bottom: 78px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .about-app__text:nth-of-type(2) {
+    padding: 0 250px;
+  }
+
+  .about-app__inner {
+    width: 730px;
+    padding-top: 124px;
+    padding-left: 25px;
+    padding-right: 155px;
+  }
+
+  .about-app__features {
+    padding-bottom: 58px;
+    background-color: $lightgray;
+  }
+
+  .about-app__features-inner {
+    @include wrapper($desktop);
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .about-app__features-title {
+    line-height: 30px;
+    margin-bottom: 24px;
+
+    & > br {
+      display: none;
+    }
+  }
+
+  .about-app__features-text {
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 30px;
+
+    & > br {
+      display: none;
+    }
+  }
+
+  .about-app__link {
+    font-size: 18px;
+    line-height: 30px;
+    color: $pink;
+    border-bottom: 1px solid $pink;
+  }
+
+  .about-app__features-value {
+    width: 470px;
+    padding-left: 114px;
+    background-position: 86% 79%;
+    background-size: 74%;
+  }
+
+  .about-app__features-value p {
+    margin-top: 99px;
+    padding-top: 12px;
+    width: 255px;
+    height: 255px;
+    font-size: 120px;
+    line-height: 187px;
+    font-weight: bold;
   }
 }

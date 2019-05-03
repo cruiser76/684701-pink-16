@@ -10,6 +10,10 @@
   background-color: $color-darkmain;
 }
 
+.downloads__container {
+  @include wrapper(320px);
+}
+
 .downloads__title {
   display: none;
 }
@@ -49,10 +53,14 @@
       url("../img/bg-back-tablet@1x.jpg");
 
     background-position: -20px 73px, -270px -111px;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
   .downloads__container {
     width: 340px;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .downloads__title {
