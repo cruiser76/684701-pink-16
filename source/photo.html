@@ -15,8 +15,12 @@
       <nav class="main-navigation">
 
         <a class="logo main-navigation__logo" href="index.html">
-          <img class="logo__img" src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Пинк" width="75"
-            height="22">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img class="logo__img" src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Пинк" width="75"
+              height="22">
+            </picture>
         </a>
 
         <button class="main-navigation__toggle">Открыть меню
@@ -44,10 +48,6 @@
 
   <main class="photo-main">
 
-    <!-- <div class="photo-main__title-container">
-      <h1 class="photo-main__title">Фотографии пользователей</h1>
-    </div> -->
-
     <p class="photo-main__text">Взгляните на фотографии которые выкладывают пользователи!
       Видите, как не хватает ваших?
     </p>
@@ -55,7 +55,13 @@
     <section class="users-photos">
 
       <article class="photo-item photo-item--pan">
-        <img class="photo-item__img photo-item__img--pan" src="img/panorama-mobile@1x.jpg" width="320" height="138" alt="Фотография">
+        <a class="photo-item__link" href="#">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+            <img class="photo-item__img photo-item__img--pan" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="138" alt="Фотография">
+          </picture>
+        </a>
         <div class="photo-item__description photo-item__description--pan">
           <p class="photo-item__author photo-item__author--pan">Анна<time class="photo-item__time" datetime="2019-04-04T23:59:59"> (5 минут
               назад)</time>
@@ -68,7 +74,13 @@
 
       <div class="users-photos__inner">
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-car-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Левон <time class="photo-item__time" datetime="2019-04-04T23:59:59">(5 часов
                 назад)</time></p>
@@ -78,7 +90,13 @@
         </article>
 
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Антон <time class="photo-item__time" datetime="2019-04-04T23:59:59">(12 часов
                 назад)</time></p>
@@ -88,7 +106,13 @@
         </article>
 
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Борис <time class="photo-item__time" datetime="2019-04-04T23:59:59">(20 часов
                 назад)</time></p>
@@ -98,7 +122,13 @@
         </article>
 
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Сергей <time class="photo-item__time" datetime="2019-04-04T23:59:59">(25 часов
                 назад)</time></p>
@@ -108,7 +138,13 @@
         </article>
 
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Максим <time class="photo-item__time" datetime="2019-04-04T23:59:59">(40 часов
                 назад)</time></p>
@@ -118,7 +154,13 @@
         </article>
 
         <article class="photo-item">
-          <img class="photo-item__img" src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография">
+          <a class="photo-item__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+              <img class="photo-item__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" width="280" height="180" alt="Фотография">
+            </picture>
+          </a>
           <div class="photo-item__description">
             <p class="photo-item__author">Надежда <time class="photo-item__time" datetime="2019-04-04T23:59:59">(45 часов
                 назад)</time></p>

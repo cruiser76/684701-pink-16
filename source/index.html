@@ -15,8 +15,12 @@
       <nav class="main-navigation">
 
         <a class="logo main-navigation__logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
             <img class="logo__img" src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Пинк" width="75"
-              height="22">
+            height="22">
+          </picture>
         </a>
 
         <button class="main-navigation__toggle">Открыть меню
@@ -39,7 +43,7 @@
         <h1 class="visually-hidden">Фотоприложение Пинк</h1>
         <p class="promo__title promo__title--hidden">Взгляните на жизнь иначе!</p>
         <div class="promo__container">
-          <a class="promo__button" href="#">Скачать приложение</a>
+          <a class="promo__button" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
           <p class="promo__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
@@ -61,16 +65,16 @@
       <div class="about-app__facts">
         <ul class="facts-list">
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Поднимает настроение</h3>
-            <p class="facts-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <h3 class="facts-list__title facts-list__title--alignment1">Поднимает настроение</h3>
+            <p class="facts-list__text facts-list__text--alignment1">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Меняет мир вокруг</h3>
-            <p class="facts-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br>усилить эффект</p>
+            <h3 class="facts-list__title facts-list__title--alignment2">Меняет мир вокруг</h3>
+            <p class="facts-list__text facts-list__text--alignment2">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br>усилить эффект</p>
           </li>
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Заводит новых друзей</h3>
-            <p class="facts-list__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <h3 class="facts-list__title facts-list__title--alignment3">Заводит новых друзей</h3>
+            <p class="facts-list__text facts-list__text--alignment3">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
       </div>
@@ -97,7 +101,12 @@
   <footer class="footer">
 
     <a class="logo footer__logo" href="index.html">
-      <img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img class="logo__img" src="img/logo-pink-blue-mobile.svg" width="147"
+        height="40" alt="Логотип Пинк">
+      </picture>
+
     </a>
 
     <ul class="social footer__social">
