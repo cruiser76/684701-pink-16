@@ -16,6 +16,7 @@
 }
 
 .main-navigation__toggle {
+  background: url("../img/icon-menu-cross.svg") no-repeat 50% 50%;
   background-color: inherit;
   position: absolute;
   font-size: 0;
@@ -24,6 +25,15 @@
   top: 13px;
   right: 11px;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-image: url("../img/icon-menu-cross-pink.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-navigation__list {
@@ -54,6 +64,14 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $white;
+
+  &:hover {
+    color: $pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -101,7 +119,7 @@
   }
 
   .main-navigation__item {
-    padding: 16px 0;
+    padding: 0;
     text-align: center;
     box-shadow: none;
 
@@ -110,9 +128,18 @@
     }
   }
 
+  .main-navigation__item--active {
+    border-bottom: 2px solid $white;
+  }
+
   .main-navigation__item a {
     text-transform: none;
     font-weight: normal;
+
+    &:active {
+      color: $white;
+      opacity: 0.3;
+    }
   }
 
   .main-navigation__toggle {
