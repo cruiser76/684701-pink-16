@@ -1,5 +1,6 @@
 .about-app__lead {
   @include wrapper(320px);
+  margin-bottom: 36px;
   padding-top: 40px;
   font-size: 24px;
   line-height: 29px;
@@ -20,7 +21,8 @@
   background-color: $lightgray;
   background-image: url("../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
-  background-position: 0% -5%;
+  background-position: 0% 0%;
+  background-size: contain;
 }
 
 .about-app__features {
@@ -30,6 +32,7 @@
 @media (min-width: $tablet) {
   .about-app__lead {
     @include wrapper($tablet);
+    margin-bottom: 50px;
     padding-top: 48px;
     font-size: 40px;
     line-height: 48px;
@@ -44,10 +47,6 @@
       padding: 0 50px;
       margin-bottom: 0;
     }
-  }
-
-  .about-app__facts {
-    background-position: 0% 0%;
   }
 
   .about-app__features-inner {
@@ -116,7 +115,7 @@
   .about-app__lead {
     @include wrapper ($desktop);
     padding-top: 67px;
-    margin-bottom: 78px;
+    margin-bottom: 75px;
     font-size: 50px;
     line-height: 60px;
   }
@@ -126,10 +125,10 @@
   }
 
   .about-app__inner {
-    width: 730px;
+    width: 615px;
     padding-top: 124px;
-    padding-left: 25px;
-    padding-right: 155px;
+    padding-left: 32px;
+    padding-right: 25px;
   }
 
   .about-app__features {
@@ -171,17 +170,19 @@
   }
 
   .about-app__features-value {
-    width: 470px;
-    padding-left: 114px;
-    background-position: 86% 79%;
-    background-size: 74%;
+    width: 345px;
+    padding-left: 34px;
+    padding-top: 102px;
+    background-position: -313% 82%;
+    background-size: 99%;
   }
 
   .about-app__features-value p {
-    margin-top: 99px;
-    padding-top: 12px;
-    width: 255px;
-    height: 255px;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    width: 250px;
+    height: 250px;
     font-size: 120px;
     line-height: 187px;
     font-weight: bold;

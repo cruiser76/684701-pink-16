@@ -15,14 +15,18 @@
       <nav class="main-navigation">
 
         <a class="logo main-navigation__logo">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
             <img class="logo__img" src="img/logo-pink-white-mobile.svg" alt="Логотип фотоприложения Пинк" width="75"
-              height="22">
+            height="22">
+          </picture>
         </a>
 
         <button class="main-navigation__toggle">Открыть меню
-          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+          <!-- <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
             <path fill="#ffffff" d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
-          </svg>
+          </svg> -->
         </button>
 
         <ul class="main-navigation__list">
@@ -39,7 +43,7 @@
         <h1 class="visually-hidden">Фотоприложение Пинк</h1>
         <p class="promo__title promo__title--hidden">Взгляните на жизнь иначе!</p>
         <div class="promo__container">
-          <a class="promo__button" href="#">Скачать приложение</a>
+          <a class="promo__button" href="https://www.apple.com/ru/itunes/">Скачать приложение</a>
           <p class="promo__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
@@ -61,16 +65,16 @@
       <div class="about-app__facts">
         <ul class="facts-list">
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Поднимает настроение</h3>
-            <p class="facts-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            <h3 class="facts-list__title facts-list__title--alignment1">Поднимает настроение</h3>
+            <p class="facts-list__text facts-list__text--alignment1">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Меняет мир вокруг</h3>
-            <p class="facts-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br>усилить эффект</p>
+            <h3 class="facts-list__title facts-list__title--alignment2">Меняет мир вокруг</h3>
+            <p class="facts-list__text facts-list__text--alignment2">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br>усилить эффект</p>
           </li>
           <li class="facts-list__item">
-            <h3 class="facts-list__title">Заводит новых друзей</h3>
-            <p class="facts-list__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            <h3 class="facts-list__title facts-list__title--alignment3">Заводит новых друзей</h3>
+            <p class="facts-list__text facts-list__text--alignment3">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
       </div>
@@ -97,7 +101,12 @@
   <footer class="footer">
 
     <a class="logo footer__logo" href="index.html">
-      <img class="logo__img" src="img/logo-pink-blue-mobile.svg" alt="Логотип Пинк">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img class="logo__img" src="img/logo-pink-blue-mobile.svg" width="147"
+        height="40" alt="Логотип Пинк">
+      </picture>
+
     </a>
 
     <ul class="social footer__social">

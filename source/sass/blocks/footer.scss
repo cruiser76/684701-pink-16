@@ -6,8 +6,12 @@
 }
 
 .footer__logo {
-  text-align: center;
+  margin: 0 auto;
   margin-bottom: 34px;
+
+  & img {
+    width: 147px;
+  }
 }
 
 .footer__social {

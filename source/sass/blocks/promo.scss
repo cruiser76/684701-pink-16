@@ -32,6 +32,11 @@
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 0% 100%;
+  background-size: 258px auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+  }
 }
 
 .promo__title--hidden {
@@ -56,6 +61,15 @@
   text-align: center;
   border: 3px solid $white;
   border-radius: 28px;
+
+  &:hover {
+    background-color: $white;
+    color: $pink;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+  }
 }
 
 .promo__description {
@@ -91,6 +105,11 @@
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-repeat: no-repeat;
     background-position: 48% 100%;
+    background-size: 700px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+    }
   }
 
   .promo__inner--small {
@@ -145,20 +164,23 @@
   .promo__inner {
     @include wrapper ($desktop);
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 97% 100%;
-    padding-left: 30px;
+    background-position: -29% 100%;
     padding-bottom: 107px;
+    background-size: 1050px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+    }
   }
 
   .promo__container {
-    width: 500px;
+    width: 300px;
   }
 
   .promo__title {
-    width: 500px;
     font-size: 50px;
     line-height: 60px;
-    padding: 108px 119px 0 121px;
+    padding: 108px 7px 0;
     margin-bottom: 25px;
   }
 
@@ -166,11 +188,13 @@
     font-size: 21px;
     line-height: 18px;
     margin-bottom: 50px;
+    margin-left: 9px;
   }
 
   .promo__description {
     padding-top: 129px;
-    background-position: 23% 15%, 50% 20%, 77% 21%;
+    padding-left: 0;
+    background-position: 19% 14%, 46% 19%, 74% 21%;
   }
 
   .promo__inner--small {
@@ -180,15 +204,15 @@
 
   .promo__title--small {
     @include wrapper($desktop);
-    padding: 64px 420px 0;
-    padding-left: 360px;
+    padding: 64px 209px 0;
+    padding-left: 210px;
     font-size: 50px;
     line-height: 60px;
   }
 
   .promo__title--form {
-    padding: 62px 170px 0;
-    padding-left: 110px;
+    padding: 62px 80px 0;
+    padding-left: 83px;
   }
 
   .promo--small {
@@ -200,4 +224,3 @@
     padding-bottom: 0;
   }
 }
-
