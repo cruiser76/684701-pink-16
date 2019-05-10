@@ -7,28 +7,29 @@
 
 .main-navigation__logo {
   position: absolute;
+  line-height: 0;
   top: 21px;
   left: 19px;
-
-  & img {
-    width: 75px;
-  }
 }
 
 .main-navigation__toggle {
-  background: url("../img/icon-menu-cross.svg") no-repeat 50% 50%;
   background-color: inherit;
   position: absolute;
   font-size: 0;
-  width: 40px;
-  height: 40px;
-  top: 13px;
-  right: 11px;
+  width: 32px;
+  height: 32px;
+  top: 20px;
+  right: 10px;
   border: none;
   cursor: pointer;
+  overflow: hidden;
 
-  &:hover {
-    background-image: url("../img/icon-menu-cross-pink.svg");
+  &-icon {
+    fill: $white;
+  }
+
+  &:hover .main-navigation__toggle-icon {
+    fill: $pink;
   }
 
   &:active {
@@ -81,15 +82,11 @@
 
   .main-navigation__logo {
     top: 26px;
-
-    & img {
-      width: 147px;
-    }
   }
 
   .main-navigation__toggle {
-    top: 36px;
-    right: 11px;
+    top: 44px;
+    right: 16px;
   }
 }
 

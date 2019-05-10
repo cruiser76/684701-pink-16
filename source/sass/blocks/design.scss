@@ -6,16 +6,18 @@
 
 .design__link {
   padding-top: 5px;
-
-  & path {
-    fill: $pink;
-  }
 }
 
 .design__text {
   margin-right: 15px;
   line-height: 18px;
   text-align: center;
+}
+
+.design__img {
+  fill: $pink;
+  width: 30px;
+  height: auto;
 }
 
 @media (min-width: $desktop) {

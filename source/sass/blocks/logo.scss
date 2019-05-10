@@ -1,7 +1,60 @@
 .logo {
-  display: block;
+  &:hover {
+    & .logo__img {
+      fill: $pink;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & .logo__img {
+      fill: $white;
+    }
+
+    & .logo__img--footer-desktop,
+    & .logo__img--footer-mobile {
+      fill: $black;
+    }
+  }
 }
 
-.logo img {
-  display: block;
+.logo__img--tablet {
+  display: none;
+}
+
+.logo__img--desktop {
+  display: none;
+}
+
+.logo__img--footer-desktop {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .logo__img--tablet {
+    display: block;
+  }
+
+  .logo__img--mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .logo__img--tablet {
+    display: none;
+  }
+
+  .logo__img--desktop {
+    display: block;
+  }
+
+  .logo__img--footer-desktop {
+    display: block;
+  }
+
+  .logo__img--footer-mobile {
+    display: none;
+  }
 }

@@ -49,38 +49,41 @@
 }
 
 .promo__button {
-  font-size: 18px;
   margin: 0 auto;
   margin-bottom: 28px;
-  padding: 15px;
-  line-height: 18px;
-  font-weight: bold;
-  color: $white;
-  display: block;
-  width: 280px;
-  text-align: center;
-  border: 3px solid $white;
-  border-radius: 28px;
+}
 
-  &:hover {
-    background-color: $white;
-    color: $pink;
+.promo__links-list {
+  @include list-reset;
+  @include wrapper(209px);
+  padding-top: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo__link-item {
+  & a {
+    display: block;
+    width: 51px;
+    height: 58px;
   }
 
-  &:active {
-    color: rgba(210, 40, 86, 0.3);
+  &--apple a {
+    background: url("../img/logo-apple.svg") no-repeat 50% 50%;
+  }
+
+  &--android a {
+    background: url("../img/logo-android.svg") no-repeat 50% 72%;
+  }
+
+  &--win a {
+    background: url("../img/logo-microsoft.svg") no-repeat 50% 75%;
   }
 }
 
 .promo__description {
   @include wrapper(320px);
-  background-image:
-    url("../img/logo-apple.svg"),
-    url("../img/logo-android.svg"),
-    url("../img/logo-microsoft.svg");
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 21% 5%, 50% 13%, 79% 15%;
-  padding: 83px 20px 16px;
+  padding: 21px 20px 16px;
   text-align: center;
   font-weight: lighter;
   color: $white;
@@ -144,19 +147,16 @@
     line-height: 60px;
   }
 
-
   .promo__button {
-    width: 300px;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 41px;
   }
 
   .promo__description {
     width: 340px;
     font-size: 18px;
     line-height: 24px;
-    background-position: 22% 17%, 50% 21%, 77% 25%;
-    padding: 109px 20px 0;
+    padding: 36px 20px 0;
   }
 }
 
@@ -177,6 +177,11 @@
     width: 300px;
   }
 
+  .promo__links-list {
+    margin-left: 56px;
+    padding-top: 16px;
+  }
+
   .promo__title {
     font-size: 50px;
     line-height: 60px;
@@ -185,16 +190,13 @@
   }
 
   .promo__button {
-    font-size: 21px;
-    line-height: 18px;
     margin-bottom: 50px;
     margin-left: 9px;
   }
 
   .promo__description {
-    padding-top: 129px;
+    padding-top: 54px;
     padding-left: 0;
-    background-position: 19% 14%, 46% 19%, 74% 21%;
   }
 
   .promo__inner--small {
