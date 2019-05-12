@@ -1,0 +1,36 @@
+.contacts {
+  @include wrapper(320px);
+  padding-top: 18px;
+  padding-bottom: 24px;
+}
+
+.contacts__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.contacts__item {
+  padding: 10px 20px 14px;
+}
+
+.contacts__label {
+  padding: 0;
+  padding-bottom: 3px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contacts__text {
+  display: block;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  text-align: center;
+  font-style: normal;
+  color: $pink;
+}

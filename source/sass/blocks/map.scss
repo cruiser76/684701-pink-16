@@ -1,0 +1,15 @@
+.map {
+  @include wrapper(320px);
+  height: 200px;
+  background:
+    url("../img/icon-map-marker.svg") 50% 58% no-repeat,
+    url("../img/bg-triangle-white-footer.svg") 0 0 no-repeat,
+    url("../img/bg-map-mobile@1x.png") 50% 100% no-repeat;
+  background-size: auto, 100%, cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/bg-triangle-white-footer.svg"),
+      url("../img/bg-map-mobile@2x.jpg");
+  }
+}

@@ -18,14 +18,14 @@
   font-size: 0;
   width: 32px;
   height: 32px;
-  top: 20px;
-  right: 10px;
+  top: 16px;
+  right: 16px;
   border: none;
   cursor: pointer;
   overflow: hidden;
 
   &-icon {
-    fill: $white;
+    fill: white;
   }
 
   &:hover .main-navigation__toggle-icon {
@@ -85,7 +85,7 @@
   }
 
   .main-navigation__toggle {
-    top: 44px;
+    top: 41px;
     right: 16px;
   }
 }
