@@ -12,12 +12,12 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="header header--small">
+  <header class="header header--small header--close">
     <div class="header__inner">
-      <nav class="main-navigation">
-
+      <nav class="main-navigation main-navigation--close">
+        <div class="main-navigation__wrapper">
         <a class="logo main-navigation__logo" href="index.html">
-          <svg width="150" viewBox="0 0 150 40">
+          <svg width="150" height="47" viewBox="0 0 150 40">
             <g class="logo__img logo__img--tablet" fill="#ffffff">
               <path
                 d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z" />
@@ -69,11 +69,17 @@
           </svg>
         </a>
 
-        <button class="main-navigation__toggle">Открыть меню
-          <svg class="main-navigation__toggle-icon" width="23" height="23"><use xlink:href="#icon-menu-cross"></use></svg>
+        <button class="main-navigation__toggle main-navigation__toggle--no-js">Открыть меню
+          <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--cross main-navigation__toggle-icon--close" width="23" height="23">
+            <use xlink:href="#icon-menu-cross"></use>
+          </svg>
+          <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--burger" width="50" height="30">
+            <use xlink:href="#icon-menu-burger"></use>
+          </svg>
         </button>
+        </div>
 
-        <ul class="main-navigation__list">
+        <ul class="main-navigation__list main-navigation__list--close">
           <li class="main-navigation__item"><a href="index.html">Главная</a></li>
           <li class="main-navigation__item main-navigation__item--active"><a href="">Фотографии</a></li>
           <li class="main-navigation__item"><a href="form.html">Конкурс</a></li>
@@ -97,8 +103,9 @@
     </p>
 
     <section class="users-photos">
-
+      <h2 class="visually-hidden">Фотографии пользователей</h2>
       <article class="photo-item photo-item--pan">
+        <h3 class="visually-hidden">Фотография пользователя</h3>
         <a class="photo-item__link" href="#">
           <picture>
             <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
@@ -121,6 +128,7 @@
 
       <div class="users-photos__inner">
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
@@ -140,6 +148,7 @@
         </article>
 
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
@@ -159,6 +168,7 @@
         </article>
 
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
@@ -178,6 +188,7 @@
         </article>
 
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
@@ -197,6 +208,7 @@
         </article>
 
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
@@ -216,6 +228,7 @@
         </article>
 
         <article class="photo-item">
+          <h3 class="visually-hidden">Фотография пользователя</h3>
           <a class="photo-item__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
@@ -247,71 +260,82 @@
         <div class="image-upload__inner">
 
           <picture>
-            <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 960px)"
+              srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)"
+              srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
             <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
             <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-            <img class="image-upload__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Фотография дороги">
+            <img class="image-upload__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x"
+              alt="Фотография дороги">
           </picture>
 
-          <ul class="image-upload__filters-list">
-            <li class="image-upload__filter-item">
-              <input class="visually-hidden image-upload__radio-input image-upload__radio-input--checked" type="radio" name="filter" value="crop" id="crop"
-                checked>
-              <label class="image-upload__radio-label image-upload__radio-label--crop" for="crop">
-                <span class="visually-hidden">Обрезка</span>
-              </label>
-            </li>
+          <div class="image-upload__container">
 
-            <li class="image-upload__filter-item">
-              <input class="visually-hidden image-upload__radio-input" type="radio" name="filter" value="fill"
-                id="fill">
-              <label class="image-upload__radio-label image-upload__radio-label--fill" for="fill">
-                <span class="visually-hidden">Заливка</span>
-              </label>
-            </li>
-
-            <li class="image-upload__filter-item">
-              <input class="visually-hidden image-upload__radio-input" type="radio" name="filter" value="contrast"
-                id="contrast">
-              <label class="image-upload__radio-label image-upload__radio-label--contrast" for="contrast">
-                <span class="visually-hidden">Контрастность</span>
-              </label>
-            </li>
-          </ul>
-
-          <ul class="image-upload__range-list">
-            <li class="image-upload__range-item image-upload__range-item--active">
-                <div class="image-upload__range-scale">
-                  <div class="image-upload__range-toggle"></div>
-                </div>
-            </li>
-            <li class="image-upload__adjusters-item">
-                <li class="image-upload__range-item">
-                    <div class="image-upload__range-scale">
-                      <div class="image-upload__range-toggle"></div>
-                    </div>
+              <ul class="image-upload__filters-list">
+                <li class="image-upload__filter-item">
+                  <input class="visually-hidden image-upload__radio-input image-upload__radio-input--checked" type="radio"
+                    name="filter" value="crop" id="crop" checked>
+                  <label class="image-upload__radio-label image-upload__radio-label--crop" for="crop">
+                    <svg class="image-upload__icon image-upload__icon--active" width="49" height="49">
+                      <use xlink:href="#icon-editor-crop"></use>
+                    </svg>
+                    <span class="visually-hidden">Обрезка</span>
+                  </label>
                 </li>
-            </li>
-            <li class="image-upload__adjusters-item">
-                <li class="image-upload__range-item">
-                    <div class="image-upload__range-scale">
-                      <div class="image-upload__range-toggle"></div>
-                    </div>
-                </li>
-            </li>
-          </ul>
 
-          <div class="image-upload__buttons-container">
-            <button class="button button--post image-upload__button" type="submit">Запостить</button>
-            <button class="button button--reset image-upload__button" type="reset">Отмена</button>
+                <li class="image-upload__filter-item">
+                  <input class="visually-hidden image-upload__radio-input" type="radio" name="filter" value="fill"
+                    id="fill">
+                  <label class="image-upload__radio-label image-upload__radio-label--fill" for="fill">
+                    <svg class="image-upload__icon" width="48" height="48">
+                      <use xlink:href="#icon-editor-fill"></use>
+                    </svg>
+                    <span class="visually-hidden">Заливка</span>
+                  </label>
+                </li>
+
+                <li class="image-upload__filter-item">
+                  <input class="visually-hidden image-upload__radio-input" type="radio" name="filter" value="contrast"
+                    id="contrast">
+                  <label class="image-upload__radio-label image-upload__radio-label--contrast" for="contrast">
+                    <svg class="image-upload__icon" width="32" height="32">
+                      <use xlink:href="#icon-editor-contrast"></use>
+                    </svg>
+                    <span class="visually-hidden">Контрастность</span>
+                  </label>
+                </li>
+              </ul>
+              <ul class="image-upload__range-list">
+                <li class="image-upload__range-item image-upload__range-item--active">
+                  <div class="image-upload__range-scale">
+                    <div class="image-upload__range-toggle"></div>
+                  </div>
+                </li>
+                <li class="image-upload__range-item">
+                  <div class="image-upload__range-scale">
+                    <div class="image-upload__range-toggle"></div>
+                  </div>
+                </li>
+                <li class="image-upload__range-item">
+                  <div class="image-upload__range-scale">
+                    <div class="image-upload__range-toggle"></div>
+                  </div>
+                </li>
+              </ul>
+
+            <div class="image-upload__buttons-container">
+              <button class="button button--post image-upload__button" type="submit">Запостить</button>
+              <button class="button button--reset image-upload__button" type="reset">Отмена</button>
+            </div>
           </div>
+
         </div>
+
       </form>
     </section>
 
-  </main>
   <footer class="footer">
 
     <a class="logo footer__logo" href="index.html">
@@ -382,7 +406,8 @@
         </svg>
       </a>
     </section>
-
+    <script src="js/script.js"></script>
+    <script src="js/picturefill.js"></script>
 </body>
 
 </html>

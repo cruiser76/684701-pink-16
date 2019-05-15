@@ -38,12 +38,45 @@
 }
 
 .photo-item__likes {
+  position: relative;
   margin: 0;
-  padding: 0 50px;
-  padding-top: 10px;
+  padding: 9px 50px 0;
   text-transform: uppercase;
   font-size: 12px;
   color: $pink;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 12px;
+    top: 15px;
+    left: 18px;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+}
+
+.photo-item--pan a {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "Панорама дня";
+    text-align: center;
+    text-transform: uppercase;
+    background: $pink;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 12px;
+    width: 140px;
+    height: 35px;
+    top: 0;
+    left: 50%;
+    color: $white;
+  }
 }
 
 .photo-item__img--pan {
@@ -86,16 +119,28 @@
     margin-bottom: 4px;
     padding: 0 27px;
     padding-top: 12px;
+
+    &::before {
+      top: 19px;
+      left: 255px;
+    }
   }
 
   .photo-item__img--pan {
     width: 700px;
-    min-height: 509px;
+    height: 509px;
   }
 
   .photo-item--pan {
     min-width: 100%;
     margin-bottom: 53px;
+
+    a {
+      &::before {
+        top: 56px;
+        left: 501px;
+      }
+    }
   }
 
   .photo-item__description--pan {
@@ -128,6 +173,11 @@
     width: 50%;
     padding-left: 162px;
     padding-top: 25px;
+
+    &::before {
+      top: 30px;
+      left: 267px;
+    }
   }
 }
 
@@ -147,6 +197,13 @@
 
   .photo-item--pan {
     margin-bottom: 53px;
+
+    a {
+      &::before {
+        top: 53px;
+        left: 77.5%;
+      }
+    }
   }
 
   .photo-item__description--pan {
@@ -163,5 +220,10 @@
   .photo-item__likes--pan {
     padding-left: 319px;
     padding-top: 22px;
+
+    &::before {
+      top: 27px;
+      left: 426px;
+    }
   }
 }

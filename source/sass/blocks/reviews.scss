@@ -18,6 +18,12 @@
   font-size: 18px;
   line-height: 30px;
   text-align: center;
+
+  &-add {
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
 }
 
 .reviews__text {
@@ -55,5 +61,130 @@
     background-color: inherit;
     box-shadow: 0 0 0 3px $color-main;
     opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.reviews__arrows {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .reviews__list {
+    @include wrapper($tablet);
+    padding-top: 70px;
+  }
+
+  .reviews__item--active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+
+  .reviews__author {
+    order: 1;
+    padding-top: 17px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    &-add {
+      order: 2;
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      line-height: 30px;
+    }
+  }
+
+  .reviews__bullets {
+    padding-top: 37px;
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .reviews {
+    @include wrapper($desktop);
+    position: relative;
+
+    &__arrows {
+      display: block;
+      position: absolute;
+    }
+
+    &__arrow-item {
+      position: absolute;
+      font-size: 0;
+      border: none;
+      background: none;
+      cursor: pointer;
+      top: -194px;
+
+      &--left {
+        left: -5px;
+      }
+
+      &--right {
+        left: 914px;
+      }
+    }
+
+    &__arrow-img {
+      fill: rgba(40, 54, 69, 0.3);
+
+      &:hover {
+        fill: $color-main;
+      }
+
+      &:active {
+        fill: rgba(40, 54, 69, 0.1);
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 150px;
+      top: 71px;
+      left: 46%;
+      background-image: url("../img/icon-quotes.svg");
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+  }
+
+  .reviews__list {
+    @include wrapper($desktop);
+    padding-top: 166px;
+    padding-bottom: 34px;
+  }
+
+  .reviews__bullets {
+    display: none;
+  }
+
+  .reviews__text {
+    padding: 0 100px;
+  }
+
+  .reviews__author {
+    font-size: 24px;
+
+    &-add {
+      font-size: 18px;
+      padding-top: 3px;
+    }
   }
 }

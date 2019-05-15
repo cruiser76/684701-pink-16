@@ -1,45 +1,62 @@
 .main-navigation {
-  position: relative;
   background-color: $color-main;
-  padding-top: 70px;
-  // background-color: transparent;
+  padding-top: 16px;
+
+  &__wrapper {
+    @include wrapper(320px);
+    position: relative;
+  }
+
+  &--close {
+    background-color: transparent;
+  }
 }
 
 .main-navigation__logo {
-  position: absolute;
-  line-height: 0;
-  top: 21px;
-  left: 19px;
+  width: 150px;
+  display: block;
+  padding-left: 20px;
 }
 
 .main-navigation__toggle {
   background-color: inherit;
   position: absolute;
   font-size: 0;
-  width: 32px;
+  width: 50px;
   height: 32px;
-  top: 16px;
-  right: 16px;
+  top: 0;
+  right: 6px;
   border: none;
   cursor: pointer;
   overflow: hidden;
 
-  &-icon {
-    fill: white;
-  }
-
-  &:hover .main-navigation__toggle-icon {
+  &:hover svg {
     fill: $pink;
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  &--no-js {
+    display: none;
+  }
+}
+
+.main-navigation__toggle-icon {
+  fill: white;
+
+  &--close {
+    display: none;
+  }
 }
 
 .main-navigation__list {
   @include list-reset();
-  // display: none;
+
+  &--close {
+    display: none;
+  }
 }
 
 .main-navigation__item {
@@ -77,16 +94,17 @@
 
 @media (min-width: $tablet) {
   .main-navigation {
-    padding-top: 110px;
-  }
+    padding-top: 20px;
 
-  .main-navigation__logo {
-    top: 26px;
+    &__wrapper {
+      @include wrapper($tablet);
+      padding-bottom: 36px;
+    }
   }
 
   .main-navigation__toggle {
-    top: 41px;
-    right: 16px;
+    top: 20px;
+    right: 7px;
   }
 }
 
@@ -94,22 +112,29 @@
   .main-navigation {
     @include wrapper($desktop);
     display: flex;
-    padding-top: 0;
-    padding-left: 329px;
-    min-height: 110px;
-
-    justify-content: space-between;
+    padding: 0;
+    justify-content: flex-start;
     align-items: center;
     background-color: transparent;
+
+    &__wrapper {
+      align-self: flex-start;
+      padding-top: 20px;
+      padding-bottom: 33px;
+      margin-left: 10px;
+      margin-right: 52px;
+      width: 267px;
+    }
   }
 
   .main-navigation__logo {
-    left: 10px;
     padding: 0;
+    padding-top: 3px;
     box-shadow: none;
   }
 
   .main-navigation__list {
+    padding: 37px 0 38px;
     width: 620px;
     display: flex;
     justify-content: space-between;

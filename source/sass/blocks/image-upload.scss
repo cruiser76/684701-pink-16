@@ -6,6 +6,8 @@
 .image-upload__inner {
   @include wrapper(320px);
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -24,7 +26,6 @@
 
 .image-upload__img {
   display: block;
-  margin: 0 auto;
   width: 280px;
   padding-top: 20px;
 }
@@ -33,53 +34,42 @@
 .image-upload__filters-list {
   @include list-reset;
   @include wrapper(210px);
-  margin-left: 53px;
-  padding-top: 41px;
+  padding: 41px 0 16px;
+  align-self: stretch;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 22px;
   align-items: center;
 }
 
 .image-upload__radio-label {
-
-  width: 50px;
-  height: 50px;
   display: block;
+  cursor: pointer;
 }
 
-.image-upload__radio-label--crop {
-  background: url("../img/icon-editor-crop.svg") no-repeat 50% 50%;
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 1;
-  }
-}
 
 .image-upload__radio-label--fill {
-  background: url("../img/icon-editor-fill.svg") no-repeat 50% 50%;
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 1;
-  }
+  margin-right: 10px;
 }
 
 .image-upload__radio-label--contrast {
-  background: url("../img/icon-editor-contrast.svg") no-repeat 50% 50%;
+  margin-right: 10px;
+}
+
+.image-upload__icon {
+  fill: $color-main;
   opacity: 0.3;
 
   &:hover {
+    fill: $color-main;
+    opacity: 0.7;
+  }
+
+  &--active {
+    fill: $pink;
     opacity: 1;
   }
 }
-
-.image-upload__radio-input:checked + .image-upload__radio-label {
-  opacity: 1;
-}
-
 
 //Ползунок
 .image-upload__range-list {
@@ -87,10 +77,11 @@
 }
 
 .image-upload__range-item {
+  width: 320px;
   display: none;
   position: relative;
-  padding: 13px 0;
-  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(72, 84, 97, 0.1);
+  padding: 13px 0 34px;
 }
 
 .image-upload__range-item--active {
@@ -99,7 +90,6 @@
 
 .image-upload__range-scale {
   @include wrapper(240px);
-  margin-left: 38px;
   height: 2px;
   background-color: $black;
 }
@@ -116,14 +106,13 @@
   cursor: pointer;
 }
 
-.image-upload__range-toggle:hover {
-  background: #1c4f80;
+.image-upload__range-toggle:active {
+  background: $pink;
 }
 
 //кнопки
-
 .image-upload__buttons-container {
-  padding-top: 50px;
+  padding-top: 38px;
   margin: 0 auto;
 }
 
@@ -137,67 +126,160 @@
 
 @media (min-width: $tablet) {
   .image-upload__text {
+    @include wrapper($tablet);
     font-size: 18px;
-  }
+    line-height: 30px;
+    text-align: center;
+    padding: 0;
+    padding-top: 44px;
 
-  .image-upload__text:nth-of-type(2) {
-    padding-bottom: 69px;
-  }
-
-  .image-upload__button {
-    border-width: 3px;
-    width: 260px;
-
-    &--post {
-      margin-bottom: 22px;
-    }
-
-    &--cancel {
-      margin-bottom: 0;
+    &:nth-of-type(2) {
+      padding-bottom: 70px;
+      padding-top: 0;
     }
   }
 
-  .image-upload__list,
-  .image-upload__range {
+  .image-upload__form {
+    padding-bottom: 54px;
+  }
+
+  .image-upload__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .image-upload__button {
+      border-width: 3px;
+      width: 260px;
+    }
+  }
+
+  .image-upload__filters-list {
     display: none;
   }
 
-  .image-upload__editors {
+  .image-upload__range-list {
+    padding-top: 62px;
+    margin-left: 36px;
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .image-upload__range-item {
     display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 34px;
+    margin-bottom: 22px;
+
+    &:first-of-type {
+      &::before {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        content: "";
+        top: 0;
+        left: 0;
+        background: url("../img/editor-crop.svg") no-repeat;
+        background-size: cover;
+      }
+
+      .image-upload__range-toggle {
+        left: 200px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::before {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        content: "";
+        top: 5px;
+        left: 2px;
+        background: url("../img/editor-fill.svg") no-repeat;
+        background-size: cover;
+      }
+
+      .image-upload__range-toggle {
+        left: 80px;
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        content: "";
+        top: 4px;
+        left: 7px;
+        background: url("../img/editor-contrast.svg") no-repeat;
+        background-size: cover;
+      }
+
+      .image-upload__range-toggle {
+        left: 150px;
+      }
+    }
+  }
+
+  .image-upload__range-scale {
+    width: 200px;
+    margin-left: 54px;
   }
 
   .image-upload__inner {
-    display: flex;
-    padding: 59px 20px 45px 20px;
-    justify-content: space-between;
+    @include wrapper($tablet);
+    flex-direction: row;
+    padding: 0;
+    align-items: stretch;
+
+    & picture {
+      width: 50%;
+      margin-top: 56px;
+      padding-left: 20px;
+    }
   }
 
   .image-upload__img {
+    width: 300px;
+    height: 400px;
     padding-top: 0;
     margin-bottom: 0;
   }
 
-  .image-upload__container {
-    width: 300px;
+  .image-upload__buttons-container {
+    padding-top: 43px;
+    text-align: left;
+    margin-left: 36px;
   }
 
-  .image-upload__buttons-container {
-    text-align: left;
-    margin-left: 27px;
+  .image-upload__button:first-of-type {
+    margin-bottom: 27px;
   }
 }
 
 @media (min-width: $desktop) {
-  .image-upload__inner {
-    padding: 55px 60px 48px 79px;
-    margin-bottom: 30px;
+  .image-upload__form {
+    padding-bottom: 59px;
   }
 
-  .image-upload__button {
-    width: 184px;
+  .image-upload__text {
+    padding: 5px 0 0;
 
-    &--post {
-      margin-bottom: 0;
+    &:nth-of-type(2) {
+      padding-bottom: 66px;
+    }
+  }
+
+  .image-upload__inner {
+    @include wrapper($desktop);
+
+    picture {
+      padding-left: 90px;
     }
   }
 
@@ -205,10 +287,67 @@
     width: 410px;
   }
 
-  .image-upload__buttons-container {
-    padding-top: 145px;
+  .image-upload__range-list {
+    width: 100%;
     margin-left: 0;
+  }
+
+  .image-upload__range-scale {
+    width: 288px;
+    margin-left: 93px;
+  }
+
+  .image-upload__range-item {
+    &:first-of-type {
+      &::before {
+        width: 45px;
+        height: 45px;
+        top: -8px;
+        left: 0;
+      }
+
+      .image-upload__range-toggle {
+        left: 163px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &::before {
+        width: 45px;
+        height: 45px;
+        top: -4px;
+        left: 2px;
+      }
+
+      .image-upload__range-toggle {
+        left: 340px;
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        width: 29px;
+        height: 29px;
+        top: 0;
+        left: 7px;
+      }
+
+      .image-upload__range-toggle {
+        left: 252px;
+      }
+    }
+  }
+
+  .image-upload__buttons-container {
+    padding-top: 124px;
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .image-upload__button {
+      width: 184px;
+      margin: 0;
+    }
   }
 }

@@ -9,25 +9,44 @@
 }
 
 .design__text {
-  margin-right: 15px;
+  margin-right: 9px;
+  padding-left: 3px;
   line-height: 18px;
   text-align: center;
 }
 
 .design__img {
+  display: block;
+  margin: 0;
+  padding: 0;
   fill: $pink;
-  width: 30px;
+  width: 40px;
   height: auto;
+
+  &:hover {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $tablet) {
   .design {
     justify-content: flex-end;
+    align-items: center;
   }
 
   .design__text {
-    font-size: 18px;
-    line-height: 18px;
+    margin: 0;
+    margin-right: 8px;
     text-align: right;
+  }
+}
+
+@media (min-width: $desktop) {
+  .design__text {
+    font-size: 18px;
   }
 }

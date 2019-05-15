@@ -10,18 +10,6 @@
   border: 3px solid $white;
   border-radius: 28px;
 
-  &--post {
-    background-color: transparent;
-    border-color: $pink;
-    color: $pink;
-  }
-
-  &--reset {
-    background-color: transparent;
-    border-color: $gray;
-    color: $pink;
-  }
-
   &:hover {
     background-color: $white;
     color: $pink;
@@ -29,6 +17,39 @@
 
   &:active {
     color: rgba(210, 40, 86, 0.3);
+  }
+
+  &--post {
+    background-color: transparent;
+    border-color: $pink;
+    color: $pink;
+
+    &:hover {
+      color: $white;
+      background-color: $pink;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &--reset {
+    background-color: transparent;
+    border-color: rgba(40, 54, 69, 0.1);
+    color: rgba(40, 54, 69, 0.1);
+
+    &:hover {
+      background-color: transparent;
+      border-color: rgba(40, 54, 69, 0.3);
+      color: rgba(40, 54, 69, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(40, 54, 69, 0.3);
+      border-color: rgba(40, 54, 69, 0.3);
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -42,5 +63,15 @@
   .button {
     font-size: 21px;
     line-height: 18px;
+
+    &--post {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &--reset {
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 }

@@ -29,6 +29,11 @@
   display: none;
 }
 
+.about-app__link {
+  color: $pink;
+  border-bottom: 1px solid $pink;
+}
+
 @media (min-width: $tablet) {
   .about-app__lead {
     @include wrapper($tablet);
@@ -111,6 +116,7 @@
   }
 }
 
+
 @media (min-width: $desktop) {
   .about-app__lead {
     @include wrapper ($desktop);
@@ -132,7 +138,7 @@
   }
 
   .about-app__features {
-    padding-bottom: 58px;
+    padding-bottom: 63px;
     background-color: $lightgray;
   }
 
@@ -165,8 +171,6 @@
   .about-app__link {
     font-size: 18px;
     line-height: 30px;
-    color: $pink;
-    border-bottom: 1px solid $pink;
   }
 
   .about-app__features-value {

@@ -122,9 +122,22 @@
     box-shadow: 0 0 0 3px $color-main;
     opacity: 1;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet) {
+  .price {
+    padding-top: 86px;
+    padding-bottom: 67px;
+  }
+
   .price__table {
     max-width: 620px;
     margin: 0 auto;
@@ -137,14 +150,13 @@
 
   .price__table-cell {
     min-width: 155px;
-    padding: 12px 0 0 5px;
+    padding: 7px 0 8px 6px;
     text-transform: initial;
-    text-align: center;
   }
 
   .price__table-sell--disappearing {
     display: table-cell;
-    padding-left: 10px;
+    padding-left: 16px;
   }
 
   .price__table-text {
@@ -154,6 +166,15 @@
   .price__value {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .price__table-mark {
+    margin-right: 0;
+  }
+
+
+  .price__cell-container {
+    justify-content: center;
   }
 
   .price__table-title--hit::before {
@@ -167,26 +188,30 @@
     font-size: 13px;
   }
 
-  .price__slider {
+  .price__bullets {
     display: none;
   }
 }
 
 @media (min-width: $desktop) {
+  .price {
+    padding-top: 153px;
+    padding-bottom: 95px;
+  }
+
   .price__table {
     max-width: 940px;
   }
 
-  .price__wrapper {
-    padding-top: 143px;
-    padding-bottom: 95px;
+  .price__table-title {
+    min-width: 167px;
   }
 
   .price__table-head {
     height: 98px;
   }
 
-  .price__table td {
+  .price__table-sell--disappearing {
     font-size: 18px;
   }
 
@@ -196,19 +221,13 @@
     padding-bottom: 16px;
   }
 
+  .price__table-mark {
+    margin-right: 19px;
+  }
+
   .price__value {
     font-size: 24px;
     line-height: 33px;
-  }
-
-  .price__table-cell--yes {
-    top: 17px;
-    right: 98px;
-  }
-
-  .price__table-cell--no {
-    top: 15px;
-    right: 99px;
   }
 
   .price__table-title--hit::before {

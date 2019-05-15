@@ -1,5 +1,6 @@
 .footer {
   @include wrapper(320px);
+  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9,20 +10,20 @@
   }
 }
 
-
 .footer__logo {
   margin: 0 auto;
-  margin-bottom: 34px;
+  margin-bottom: 25px;
 }
 
 .footer__social {
   @include list-reset;
-  margin-bottom: 31px;
+  margin-bottom: 23px;
 }
 
 @media (min-width: $tablet) {
   .footer {
     @include wrapper($tablet);
+    padding: 35px 0 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -33,25 +34,53 @@
   }
 
   .footer__logo {
+    margin-left: 20px;
     width: 25%;
   }
 
   .footer__social {
+    margin-right: 7px;
     width: 50%;
   }
 
   .footer__design {
     width: 25%;
+    margin-right: 14px;
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: $desktop) {
   .footer {
-    @include wrapper(940px);
-    min-height: 225px;
+    @include wrapper($desktop);
+    padding: 95px 0 0;
+
+    &--main {
+      padding: 73px 0 0;
+    }
+
+    &--form {
+      padding: 71px 0 0;
+
+      .footer__social {
+        margin-right: 13px;
+        margin-bottom: 29px;
+      }
+    }
   }
 
   .footer__logo {
     text-align: left;
+    margin-left: 10px;
+  }
+
+  .footer__design {
+    margin-right: 3px;
+    margin-bottom: 32px;
+  }
+
+  .footer__social {
+    margin-right: 23px;
+    margin-bottom: 29px;
   }
 }
