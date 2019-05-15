@@ -10,7 +10,7 @@ toggleBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   mainNavMenu.classList.toggle("main-navigation__list--close");
   header.classList.toggle("header--close");
-  mainNav.classList.toggle("main-navigation--close")
+  mainNav.classList.toggle("main-navigation--close");
   burgerIcon.classList.toggle("main-navigation__toggle-icon--close");
   crossIcon.classList.toggle("main-navigation__toggle-icon--close");
 });
