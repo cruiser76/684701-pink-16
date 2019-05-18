@@ -5,7 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Фотоприложение Пинк</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -13,9 +17,9 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="header header--close">
+  <header class="header header--close header--no-js">
     <div class="header__inner">
-      <nav class="main-navigation main-navigation--close">
+      <nav class="main-navigation main-navigation--close main-navigation--no-js">
         <div class="main-navigation__wrapper">
           <a class="logo main-navigation__logo">
             <svg width="150" height="47" viewBox="0 0 150 40">
@@ -81,7 +85,7 @@
         </div>
 
 
-        <ul class="main-navigation__list main-navigation__list--close">
+        <ul class="main-navigation__list main-navigation__list--close main-navigation__list--no-js">
           <li class="main-navigation__item main-navigation__item--active"><a href="">Главная</a></li>
           <li class="main-navigation__item"><a href="photo.html">Фотографии</a></li>
           <li class="main-navigation__item"><a href="form.html">Конкурс</a></li>
@@ -177,13 +181,13 @@
       </ul>
       <div class="reviews__arrows">
         <button class="reviews__arrow-item reviews__arrow-item--left" type="button">
-          <svg class="reviews__arrow-img" width="40" height="40">
+          <svg class="reviews__arrow-img" width="30" height="40">
             <use xlink:href="#icon-review-arrow-left"></use>
           </svg>
           Влево
         </button>
         <button class="reviews__arrow-item reviews__arrow-item--right" type="button">
-          <svg class="reviews__arrow-img" width="40" height="40">
+          <svg class="reviews__arrow-img" width="30" height="40">
             <use xlink:href="#icon-review-arrow-right"></use>
           </svg>
           Вправо

@@ -17,6 +17,14 @@
   &--close {
     background-position: 50% 0%;
   }
+
+  &--no-js-small {
+    background-position: 52% 765%;
+  }
+
+  &--no-js {
+    background-position: 50% 49%;
+  }
 }
 
 .header__inner {
@@ -39,6 +47,14 @@
 
     &--close {
       background-position: 50% 0%;
+    }
+
+    &--no-js-small {
+      background-position: 50% -754%;
+    }
+
+    &--no-js {
+      background-position: 50% 100%;
     }
   }
 }

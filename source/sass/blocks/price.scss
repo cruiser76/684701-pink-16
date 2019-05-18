@@ -118,7 +118,7 @@
   }
 
   &--active {
-    background-color: inherit;
+    background-color: transparent;
     box-shadow: 0 0 0 3px $color-main;
     opacity: 1;
   }
@@ -171,7 +171,6 @@
   .price__table-mark {
     margin-right: 0;
   }
-
 
   .price__cell-container {
     justify-content: center;

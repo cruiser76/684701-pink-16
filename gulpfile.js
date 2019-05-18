@@ -14,7 +14,10 @@ var webp = require("gulp-webp");
 var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
+var htmlmin = require('gulp-htmlmin');
 var include = require("posthtml-include");
+var uglify = require('gulp-uglify');
+
 
 
 //удаляем папку билд
@@ -28,8 +31,8 @@ gulp.task("copy", function() {
     "source/fonts**/*.{woff,woff2}",
     "source/img/**",
     //"source/js/**",
-    "source/*.ico",
-    "source/*.html"
+    "source/*.ico"
+    //"source/*.html"
   ], {
     base: "source"
   })
@@ -66,18 +69,20 @@ gulp.task("sprite", function () {
   .pipe(gulp.dest("build/img"));
 });
 
-//инлайним свг в хтмл
+//инлайним свг в хтмл и минифицируем
 gulp.task("html", function () {
   return gulp.src("source/*.html")
   .pipe(posthtml([
     include()
   ]))
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 });
 
 //обновляем js в билд
 gulp.task("js", function () {
   return gulp.src("source/js/**/*.js")
+  .pipe(uglify())
   .pipe(gulp.dest("build/js"));
 });
 
@@ -89,8 +94,9 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    //+минификатор
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -109,7 +115,6 @@ gulp.task("server", function () {
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/js/**/*.js", gulp.series("js", "refresh"));
-  gulp.watch("source/img/**/*.{png,jpg,svg}", gulp.series("refresh"));
 });
 
 //перезапуск сервера

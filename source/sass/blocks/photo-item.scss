@@ -12,10 +12,27 @@
 }
 
 .photo-item__description {
+  position: relative;
   background-color: $lightgray;
   width: 280px;
   margin: 0 auto;
   padding-bottom: 20px;
+
+  &--pan::before {
+    position: absolute;
+    content: "Панорама дня";
+    text-align: center;
+    text-transform: uppercase;
+    background: $pink;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 12px;
+    width: 140px;
+    height: 35px;
+    top: -137px;
+    right: 0;
+    color: $white;
+  }
 }
 
 .photo-item__author {
@@ -56,26 +73,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-  }
-}
-
-.photo-item--pan a {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "Панорама дня";
-    text-align: center;
-    text-transform: uppercase;
-    background: $pink;
-    font-weight: bold;
-    line-height: 35px;
-    font-size: 12px;
-    width: 140px;
-    height: 35px;
-    top: 0;
-    left: 50%;
-    color: $white;
   }
 }
 
@@ -134,13 +131,6 @@
   .photo-item--pan {
     min-width: 100%;
     margin-bottom: 53px;
-
-    a {
-      &::before {
-        top: 56px;
-        left: 501px;
-      }
-    }
   }
 
   .photo-item__description--pan {
@@ -154,6 +144,10 @@
     align-content: space-between;
     flex-grow: 1;
     flex-shrink: 0;
+
+    &::before {
+      top: -452px;
+    }
   }
 
   .photo-item__author--pan {
@@ -184,25 +178,18 @@
 @media (min-width: $desktop) {
   .photo-item {
     margin-bottom: 53px;
+
+    &--pan {
+      margin-bottom: 53px;
+    }
   }
 
   .photo-item__img {
     height: 400px;
-  }
 
-  .photo-item__img--pan {
-    width: 100%;
-    height: 510px;
-  }
-
-  .photo-item--pan {
-    margin-bottom: 53px;
-
-    a {
-      &::before {
-        top: 53px;
-        left: 77.5%;
-      }
+    &--pan {
+      width: 100%;
+      height: 510px;
     }
   }
 
@@ -210,6 +197,10 @@
     @include wrapper(940px);
     align-content: flex-start;
     min-height: 90px;
+
+    &::before {
+      top: -456px;
+    }
   }
 
   .photo-item__author--pan {

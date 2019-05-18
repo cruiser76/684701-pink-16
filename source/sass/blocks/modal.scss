@@ -50,6 +50,8 @@
 }
 
 .modal__button {
+  border: none;
+  font-family: $font;
   font-size: 18px;
   line-height: 30px;
   color: $white;
@@ -59,17 +61,17 @@
   width: 280px;
   display: inline-block;
   vertical-align: top;
-  background-color: green;
+  background-color: #2aab6d;
   padding: 20px 0;
 }
 
 .modal__button:hover {
-  background-color: green;
+  background-color: #1c9b5e;
 }
 
 .modal__button:active {
-  background-color: green;
-  color: $color-main;
+  background-color: #1c9b5e;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .modal__button-wrapper {
